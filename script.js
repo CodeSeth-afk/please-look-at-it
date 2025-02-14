@@ -22,7 +22,23 @@ function showAd() {
 function closeAd() {
     document.getElementById("fake-ad").style.display = "none";
     document.getElementById("overlay").style.display = "none";
-    setTimeout(showAd, Math.random() * 5000 + 3000);
+    setTimeout(showAd, 5000);
 }
 
-setTimeout(showAd, 3000);
+let video = document.getElementById("video-player");
+video.play();
+
+video.addEventListener("ended", function () {
+    video.currentTime = 0; // Reset to the start
+    video.play(); // Play again
+});
+
+// Function to create a new popup when clicking "អត់ស្រឡាញ់"
+function addMorePopups() {
+    alert("ចុច​អត់ដើរ ហា​ 😸😂!! ចុច ស្រឡាញ់មើល​ ");
+}
+
+
+
+
+setTimeout(showAd, 10000);
